@@ -1,6 +1,15 @@
-body {
-    padding: 50px;
-}
 a {
     color: #00B7FF;
+}
+.nav {
+    padding: 30px;
+    background-color: gray;
+}
+.navbar{
+    background-color: green;
+}
+.list-group-item {
+
+    margin-bottom: 15px;
+    
 }
