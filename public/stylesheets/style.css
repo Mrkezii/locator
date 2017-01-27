@@ -1,13 +1,21 @@
 a {
     color: #00B7FF;
 }
+.badge{background-color: green;}
+
+
+/* Nav bar*/
 .nav {
-    /*padding: 30px;*/
     background-color: gray;
 }
 .navbar{
     background-color: green;
 }
+.navbar-nav {
+    margin-bottom: auto;
+}
+
+
 .list-group-item {
 
     margin-bottom: 15px;

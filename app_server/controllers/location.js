@@ -1,12 +1,14 @@
 //Get Home page
 module.exports.homelist = function (req, res, next) {
     res.render('location-list', {
-        title: 'Loc8r - find a place to work with wifi',
+        title: 'Locator - find a place to work with wifi',
         pageHeader: {
-            title: 'Loc8r ',
+            title: 'Locator ',
             strapline: 'Find places to work with wifi near you!'
 
         },
+        sidebar:"Looking for wifi and a seat? Locator helps you find places to work when out and about. Perhaps with" +
+        " coffee, cake or a pint? Let Loc8r help you find the place you're looking for.",
         locations: [{
             name: 'Starcups',
             address: '125 High Street, Reading, RG6 1PS',
@@ -15,7 +17,7 @@ module.exports.homelist = function (req, res, next) {
             distance: '10m'
         },{
             name: 'Cafe Hero',
-            address: '125 low Street, writing, ota',
+            address: '12 low Street, writing, lagos',
             rating: 4,
             facilities: ['Hot drinks', 'Food', 'Premium wifi'],
             distance: '200m'
@@ -25,6 +27,12 @@ module.exports.homelist = function (req, res, next) {
             rating: 2,
             facilities: ['Food', 'Premium wifi'],
             distance: '250m'
+        },{
+            name: 'Cafetaria 2',
+            address: 'beside senate building and opposite guest house',
+            rating: 0,
+            facilities: ['burnt food'],
+            distance: '1m'
         }]
     });
 }

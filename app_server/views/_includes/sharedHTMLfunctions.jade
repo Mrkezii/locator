@@ -1,0 +1,9 @@
+mixin outputRating(rating)
+    // start the JS with a dash/hyphen so that it is interpreted as inline
+    - for (var i = 1; i <= rating; i++)
+        | &nbsp
+        span.glyphicon.glyphicon-star
+        //span.glyphicon.glyphicon-star is a bootstrap class
+    - for (var i = rating; i < 5; i++)
+        | &nbsp
+        span.glyphicon.glyphicon-star-empty

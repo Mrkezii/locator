@@ -1,8 +1,10 @@
+//inculde that enables to use mixin
+include _includes/sharedHTMLfunctions
+// extends the default layout page
 extends layout
 
 block content
     #banner.page-header
-
         .row
             .col-lg-6
                 h1= pageHeader.title
@@ -10,78 +12,19 @@ block content
     .row
         .col-xs-12.col-sm-8
             .row.list-group
+                // location var that loops from locations in object in controller
                 each location in locations
                     .col-xs-12.list-group-item
                         h4
-
                             a(href="/location-info")= location.name
-                            //small &nbsp;
-                            //    span.glyphicon.glyphicon-star
-                            //    span.glyphicon.glyphicon-star
-                            //    span.glyphicon.glyphicon-star
-                            //    span.glyphicon.glyphicon-star-empty
-                            //    span.glyphicon.glyphicon-star-empty
-                            small
-                                - for (var i = 1; i <= location.rating; i++)
-                                    | &nbsp;
-                                    span.glyphicon.glyphicon-star
-                                - for (i = location.rating; i < 5; i++)
-                                    | &nbsp;
-                                    span.glyphicon.glyphicon-star-empty
-
-
+                            small &nbsp &nbsp &nbsp;
+                                +outputRating(location.rating) //mixin that runs a for loop from _includes folder
                             span.badge.pull-right.badge-default= location.distance
                         p.address= location.address
                         p
                             each facility in location.facilities
                                 span.label.label-warning= facility
-                                | &nbsp;
-                            //span.label.label-warning Hot drinks
-                            //| &nbsp;
-                            //span.label.label-warning Food
-                            //| &nbsp;
-                            //span.label.label-warning Premium wifi
-                            //| &nbsp;
-    
-                
-                //.col-xs-12.list-group-item
-                //    h4
-                //        a(href="/location-info") Starcups
-                //        small &nbsp;
-                //            span.glyphicon.glyphicon-star
-                //            span.glyphicon.glyphicon-star
-                //            span.glyphicon.glyphicon-star
-                //            span.glyphicon.glyphicon-star
-                //            span.glyphicon.glyphicon-star-empty
-                //        span.badge.pull-right.badge-default 50m
-                //    p.address 125 Low Street, Reading, RG6 1PS
-                //    p
-                //        span.label.label-warning Hot drinks
-                //        | &nbsp;
-                //        span.label.label-warning Food
-                //        | &nbsp;
-                //        span.label.label-warning Premium wifi
-                //        | &nbsp;
-                //
-                //.col-xs-12.list-group-item
-                //    h4
-                //        a(href="/location-info") Starcups
-                //        small &nbsp;
-                //            span.glyphicon.glyphicon-star
-                //            span.glyphicon.glyphicon-star
-                //            span.glyphicon.glyphicon-star-empty
-                //            span.glyphicon.glyphicon-star-empty
-                //            span.glyphicon.glyphicon-star-empty
-                //        span.badge.pull-right.badge-default 30m
-                //    p.address 125 High Street, wyoming, RG6 1PS
-                //    p
-                //        span.label.label-warning Hot drinks
-                //        | &nbsp;
-                //        span.label.label-warning Food
-                //        | &nbsp;
-                //        span.label.label-warning Premium wifi
-                //        | &nbsp;
-                //
-                //
+                                | &nbsp &nbsp;
+
         .col-xs-12.col-sm-4
-            p.lead Looking for wifi and a seat? Loc8r helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you're looking for.
+            p.lead= sidebar
