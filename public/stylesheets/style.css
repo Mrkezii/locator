@@ -2,7 +2,7 @@ a {
     color: #00B7FF;
 }
 .nav {
-    padding: 30px;
+    /*padding: 30px;*/
     background-color: gray;
 }
 .navbar{
@@ -18,3 +18,6 @@ a {
 .review-header {margin-bottom: 10px;}
 .reviewAuthor {margin: 0 5px;}
 .reviewTimestamp {color: #ccc;}
+.nav-container{
+    margin-top: 10%;
+}
