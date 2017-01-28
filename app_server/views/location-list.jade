@@ -1,7 +1,7 @@
-//inculde that enables to use mixin
-include _includes/sharedHTMLfunctions
 // extends the default layout page
 extends layout
+// Inculde that enables to use mixin
+include _includes/sharedHTMLfunctions
 
 block content
     #banner.page-header
@@ -18,13 +18,17 @@ block content
                         h4
                             a(href="/location-info")= location.name
                             small &nbsp &nbsp &nbsp;
-                                +outputRating(location.rating) //mixin that runs a for loop from _includes folder
+                                +outputRating(location.rating)
+                                //mixin that runs a for loop from _includes folder
                             span.badge.pull-right.badge-default= location.distance
+                        //get address from location in locations
                         p.address= location.address
                         p
                             each facility in location.facilities
                                 span.label.label-warning= facility
+                                //get facility from controller
                                 | &nbsp &nbsp;
 
         .col-xs-12.col-sm-4
             p.lead= sidebar
+            //get sidebar from controller

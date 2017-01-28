@@ -7,13 +7,15 @@ module.exports.homelist = function (req, res, next) {
             strapline: 'Find places to work with wifi near you!'
 
         },
-        sidebar:"Looking for wifi and a seat? Locator helps you find places to work when out and about. Perhaps with" +
-        " coffee, cake or a pint? Let Loc8r help you find the place you're looking for.",
+        sidebar:"Looking for wifi and a seat? Locator" +
+        " helps you find places to work when out and about. Perhaps with" +
+        " coffee, cake or a pint? Let Loc8r help you " +
+        "find the place you're looking for.",
         locations: [{
             name: 'Starcups',
             address: '125 High Street, Reading, RG6 1PS',
             rating: 3,
-            facilities: ['Hot drinks', 'Food', 'Premium wifi', 'Beach'],
+            facilities: ['Hot drinks', 'Food', 'Premium wifi', 'Beach', 'Chapel'],
             distance: '10m'
         },{
             name: 'Cafe Hero',
@@ -24,13 +26,13 @@ module.exports.homelist = function (req, res, next) {
         },{
             name: 'Burger Queen',
             address: 'Covenant University, Canaanland',
-            rating: 2,
+            rating: 3,
             facilities: ['Food', 'Premium wifi'],
             distance: '250m'
         },{
             name: 'Cafetaria 2',
             address: 'beside senate building and opposite guest house',
-            rating: 0,
+            rating: 1,
             facilities: ['burnt food'],
             distance: '1m'
         }]

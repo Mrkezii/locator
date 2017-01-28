@@ -14,12 +14,10 @@ a {
 .navbar-nav {
     margin-bottom: auto;
 }
-
+/* End Nav bar*/
 
 .list-group-item {
-
     margin-bottom: 15px;
-    
 }
 .review {padding-bottom: 5px;}
 .panel-body.review-container {padding-top: 0;}
